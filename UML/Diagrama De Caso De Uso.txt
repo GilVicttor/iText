@@ -1,0 +1,19 @@
+@startuml
+
+:Rede Social: as social
+:Usuário: as user
+
+social <|-- user
+
+social -> (Cadastrar usuário)
+social -> (Incluir informações pessoais do usuário) #nome, email, idade e profissão#
+social -> (Possibilitar troca de mensagens) #entre dois usuários, de forma privada# 
+social -> (Possibilitar post de textos) #com até 140 caracteres#
+social -> (Mostrar todas as mensagens trocadas) #entre o usuário e um amigo específico#
+
+user -> (Acesso à rede social) #por meio de login (email) e senha#
+user -> (Adicionar um amigo) 
+user -> (Pesquisar um amigo) #partir do preenchimento de parte do nome dele#
+user -> (Desfazer uma amizade)
+
+@enduml

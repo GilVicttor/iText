@@ -1,0 +1,39 @@
+@startuml
+
+Rede_Social *-- Usuario
+
+class Rede_Social {
+  string nome
+  string email
+  string idade
+  string profissao;
+  
+  string getNome()
+  string getEmail()
+  string getIdade()
+  string getProfissao()
+  void trocar_mensagem(mensagem, usuario_destino)
+  void postar_texto (texto)
+  void mostrar_mensagens(mensagens, amigo)
+
+}
+
+class Usuario {
+  string nome
+  string email
+  string idade
+  string profissao;
+  
+  void acessar_conta(emal, senha)
+  void adicionar_amigo(usuario)
+  void trocar_mensagem(mensagem, usuario_destino)
+  void postar_texto (texto)
+  void mostrar_mensagens(mensagens, amigo)
+  void pesquisar_amigo(parte_nome)
+  void desfazer_amizade(usuario)
+  
+}
+
+
+@enduml
+
